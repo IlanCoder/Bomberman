@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Bomb : MonoBehaviour
@@ -30,6 +31,8 @@ public class Bomb : MonoBehaviour
         Ray ray = new Ray(transform.position, Vector3.right);
 
         RaycastHit[] hits = Physics.SphereCastAll(ray, sphereCastRad, range, layerMask);
+        
+        Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
 
         if (hits.Length > 0)
         {
