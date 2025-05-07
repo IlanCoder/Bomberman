@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7219254369213443594}
   - component: {fileID: 1463495051998733589}
   - component: {fileID: 7734265680895530486}
+  - component: {fileID: 6056737992282217844}
   - component: {fileID: 4897242997895305401}
   - component: {fileID: 7635647756791762873}
   - component: {fileID: 936120835663260470}
@@ -91,6 +92,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6056737992282217844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211197756224899571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676d18d8505c1624080c649f8986b55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 5015120231522638285, guid: 0e1d0a2dab0abda4a8156697e2e9378f, type: 3}
 --- !u!114 &4897242997895305401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDir: {x: 0, y: 0}
+  OnBombPressed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &936120835663260470
 MonoBehaviour:
   m_ObjectHideFlags: 0
