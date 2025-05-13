@@ -195,7 +195,7 @@ MonoBehaviour:
   sphereCastRad: 1.6
   layerMask:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 311
   range: 100
   explosionTimer: 3
 --- !u!95 &8077570292942322592
