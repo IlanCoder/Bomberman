@@ -59,12 +59,13 @@ public class Bomb : MonoBehaviour {
         Ray ray = new Ray(transform.position, direction);
         RaycastHit[] hits = Physics.SphereCastAll(ray, sphereCastRad, range, layerMask);
         Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
-        if (hits.Length > 0)
-        {
-            foreach (RaycastHit hit in hits)
-            {
+        if (hits.Length > 0) {
+            foreach (RaycastHit hit in hits) {
                 if (hit.transform.tag == "Unbreakable") break;
-                hit.transform.gameObject.SetActive(false);
+                if (hit.transform.tag == "Player") 
+                    hit.transform.GetComponent<MovementController>().DisablePlayer();
+                else 
+                    hit.transform.gameObject.SetActive(false);
                 if (hit.transform.tag == "Breakable") break;
             }
         }

@@ -21,4 +21,12 @@ public class MovementController : MonoBehaviour
             characterController.Move(transform.forward * speed * Time.deltaTime);
         }
     }
+
+    public void DisablePlayer()
+    {
+        GetComponent<PlayerBombManager>().enabled = false;
+        characterController.enabled = false;
+        GetComponent<MeshRenderer>().enabled = false;
+        this.enabled = false;
+    }
 }
